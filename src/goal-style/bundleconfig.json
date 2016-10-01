@@ -1,0 +1,32 @@
+[
+  {
+    "outputFileName": "wwwroot/appCss/site.min.css",
+    "inputFiles": [
+      "wwwroot/appCss/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/appCss/app.min.css",
+    "inputFiles": [
+      "wwwroot/appCss/app.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/bootstrap-material-ui/css/material-kit.min.css",
+    "inputFiles": [
+      "wwwroot/vendor/bootstrap-material-ui/css/material-kit.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/bootstrap-material-ui/js/material-kit.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/bootstrap-material-ui/js/material-kit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/systemjs.config.min.js",
+    "inputFiles": [
+      "wwwroot/systemjs.config.js"
+    ]
+  }
+]

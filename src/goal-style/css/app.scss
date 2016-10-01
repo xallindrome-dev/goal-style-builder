@@ -1,0 +1,21 @@
+﻿$bodyFont: "Open Sans", Helvetica, Arial, sans-serif;
+$headerFont: "Roboto", Helvetica, Arial, sans-serif;
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 10px;
+    margin: 0 auto;
+    font-family: $bodyFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerFont;
+}
+
+.pointer {
+    cursor: pointer;
+}
