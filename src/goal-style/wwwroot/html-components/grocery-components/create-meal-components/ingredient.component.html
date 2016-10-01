@@ -1,0 +1,8 @@
+﻿<div>
+    <label>Ingredient</label>
+    <input type="text" class="input-sm form-control" placeholder="name" [(ngModel)]="ingredient.name" />
+    <label>Amount</label>
+    <input class="input-sm form-control" type="number" [(ngModel)]="ingredient.amount" placeholder="amount" />
+    <label>Type</label>
+    <input class="input-sm form-control" type="text" [(ngModel)]="ingredient.type" list="ingredient-types" />
+</div>

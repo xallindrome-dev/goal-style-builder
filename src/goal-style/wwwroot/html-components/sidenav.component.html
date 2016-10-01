@@ -1,0 +1,13 @@
+﻿<nav class="sidenav" [style.width]="sideNavWidth">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
+    <details>
+        <summary>Meal List</summary>
+        <meal-list></meal-list>
+    </details>
+    <details>
+        <summary>Grocery List</summary>
+        <grocery-list></grocery-list>
+    </details>
+</nav>
+
+<div class="overlay" *ngIf="showOverlay"></div>

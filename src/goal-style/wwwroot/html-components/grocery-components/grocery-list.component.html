@@ -1,0 +1,9 @@
+﻿<div class="col-md-4">
+    <h2>{{ title }}</h2>
+
+    <div *ngIf="groceryList">
+        <ingredient-details *ngFor="let ingredient of groceryList.ingredients"
+                            [ingredient]="ingredient">
+        </ingredient-details>
+    </div>
+</div>

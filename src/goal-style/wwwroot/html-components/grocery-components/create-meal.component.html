@@ -1,0 +1,39 @@
+﻿<div class="col-md-12" *ngIf="meal">
+    <h2>{{ title }}</h2>
+    <div *ngIf="!isMealSaved">
+        <input class="input-no-border form-control" type="text" placeholder="Meal Name" [(ngModel)]="meal.name" />
+        <div>
+            <label>
+                <input class="radio-inline" type="radio" name="mealsize" value="Large" [(ngModel)]="meal.size" /> L
+            </label>
+            <label>
+                <input class="radio-inline" type="radio" name="mealsize" value="Medium" [(ngModel)]="meal.size" /> M
+            </label>
+            <label>
+                <input class="radio-inline" type="radio" name="mealsize" value="Small" [(ngModel)]="meal.size" /> S
+            </label>
+            <label>
+                <input class="radio-inline" type="radio" name="mealsize" value="Extra Small" [(ngModel)]="meal.size" /> XS
+            </label>
+        </div>
+        <div>
+            <button class="btn btn-success" type="submit" (click)="saveMeal()">Save Meal</button>
+        </div>
+    </div>
+    <div *ngIf="isMealSaved">
+        <div>
+            <button class="btn btn-success" type="submit" (click)="addNewMeal()">Add Another Meal</button>
+        </div>
+        <h3>{{ meal.name }} - {{ meal.size }}</h3>
+        <ingredient-details *ngFor="let ingredient of meal.ingredients" [ingredient]="ingredient"></ingredient-details>
+        <div *ngIf="addingIngredient">
+            <ingredient [ingredient]="ingredient"></ingredient>
+            <span class="save-ingredient pull-right pointer" (click)="saveIngredient()">
+                <span class="glyphicon glyphicon-save"></span> Save Ingredient
+            </span>
+        </div>
+        <span class="add-ingredient pull-right pointer" (click)="addIngredient()" *ngIf="!addingIngredient">
+            <span class="glyphicon glyphicon-plus-sign"></span> Add New Ingredient
+        </span>
+    </div>
+</div>

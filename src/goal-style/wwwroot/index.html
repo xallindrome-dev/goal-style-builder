@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <base href="/" />
+    <title>Productivity Master</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300" rel="stylesheet">
+
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="appCss/app.css" rel="stylesheet" />
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+
+    <script src="libs/core-js/client/shim.min.js"></script>
+    <script src="libs/zone.js/dist/zone.js"></script>
+    <script src="libs/reflect-metadata/Reflect.js"></script>
+    <script src="libs/systemjs/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('appScripts/boot').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+</head>
+<!-- 3. Display the application -->
+<body>
+    <my-app>Loading...</my-app>
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<main [style.marginRight]="mainMarginRight">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#master-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Productivity Master</a>
+            </div>
+            <div class="collapse navbar-collapse" id="master-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="btn btn-white btn-simple btn-just-icon" routerLink="/grocery" routerLinkActive="active">Grocery Master</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-white btn-simple btn-just-icon" routerLink="/goal" routerLinkActive="active">Goal Master</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-white btn-simple btn-just-icon" routerLink="/fitness" routerLinkActive="active">Fitness Master</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br />
+    <br />
+    <router-outlet></router-outlet>
+    <span (click)="openSideNav()">Click me to open sidenav</span>
+    <datalist id="ingredient-types">
+        <option value="g">Gram(s)</option>
+        <option value="tbsp">Tablespoon(s)</option>
+        <option value="tsp">Teaspoon(s)</option>
+        <option value="ml">Milliter(s)</option>
+    </datalist>
+</main>
+
+<sidenav
+         [sideNavWidth]="sideNavWidth"
+         [showOverlay]="showOverlay"
+         (closeNav)="closeSideNav($event)">
+</sidenav>
