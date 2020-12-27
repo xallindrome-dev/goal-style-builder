@@ -8,22 +8,54 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s; }
+  transition: 0.5s;
+  padding-left: 35px; }
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 2em;
     color: #818181;
     display: block;
     transition: 0.3s; }
-    .sidenav a :hover, .sidenav a :focus {
-      color: #f1f1f1; }
+  .sidenav details {
+    color: #ccc;
+    padding: 0 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    margin: 0 0 .4em; }
+  .sidenav summary {
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: bold;
+    margin: -1%;
+    padding: 8px 0;
+    position: relative;
+    width: 102%; }
+  .sidenav summary::-webkit-details-marker {
+    display: none; }
+  .sidenav summary:before {
+    border-radius: 5px;
+    content: "+";
+    color: #ccc;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -7px 10px 0 10px;
+    padding: 0;
+    text-align: center;
+    width: 20px; }
+  .sidenav details[open] summary:before {
+    content: "-";
+    margin-top: -7px; }
   .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px; }
+    top: 5px;
+    left: 5px;
+    padding: 0; }
+    .sidenav .closebtn :hover {
+      color: #f1f1f1; }
+    .sidenav .closebtn .glyphicon-remove:hover {
+      color: red; }
 
 main {
   transition: margin-left .5s;

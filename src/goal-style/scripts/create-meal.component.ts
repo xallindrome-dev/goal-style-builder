@@ -57,6 +57,7 @@ export class CreateMealComponent implements OnInit {
 
     addNewMeal(): void {
         this.isMealSaved = false;
+        this.addingIngredient = false;
         this.createNewMeal();
     }
 

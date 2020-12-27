@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var grocery_list_1 = require("./grocery-list");
 var grocery_list_service_1 = require("./grocery-list.service");
@@ -32,17 +33,19 @@ var GroceryListComponent = (function () {
         })
             .catch(function (error) { return console.log(error); });
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', grocery_list_1.GroceryList)
-    ], GroceryListComponent.prototype, "groceryList", void 0);
-    GroceryListComponent = __decorate([
-        core_1.Component({
-            selector: "grocery-list",
-            templateUrl: "html-components/grocery-components/grocery-list.component.html"
-        }), 
-        __metadata('design:paramtypes', [ingredient_service_1.IngredientService, grocery_list_service_1.GroceryListService])
-    ], GroceryListComponent);
     return GroceryListComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", grocery_list_1.GroceryList)
+], GroceryListComponent.prototype, "groceryList", void 0);
+GroceryListComponent = __decorate([
+    core_1.Component({
+        selector: "grocery-list",
+        templateUrl: "html-components/grocery-components/grocery-list.component.html"
+    }),
+    __metadata("design:paramtypes", [ingredient_service_1.IngredientService,
+        grocery_list_service_1.GroceryListService])
+], GroceryListComponent);
 exports.GroceryListComponent = GroceryListComponent;
+//# sourceMappingURL=grocery-list.component.js.map

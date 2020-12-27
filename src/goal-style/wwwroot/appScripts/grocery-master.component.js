@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var GroceryMasterComponent = (function () {
@@ -15,13 +16,15 @@ var GroceryMasterComponent = (function () {
         this.router = router;
         this.title = "Grocery Master";
     }
-    GroceryMasterComponent = __decorate([
-        core_1.Component({
-            selector: "grocery-master",
-            templateUrl: "html-components/grocery-master.html"
-        }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], GroceryMasterComponent);
     return GroceryMasterComponent;
 }());
+GroceryMasterComponent = __decorate([
+    core_1.Component({
+        selector: "grocery-master",
+        templateUrl: "html-components/grocery-master.html",
+        styleUrls: ["appCss/grocery-master.css"]
+    }),
+    __metadata("design:paramtypes", [router_1.Router])
+], GroceryMasterComponent);
 exports.GroceryMasterComponent = GroceryMasterComponent;
+//# sourceMappingURL=grocery-master.component.js.map

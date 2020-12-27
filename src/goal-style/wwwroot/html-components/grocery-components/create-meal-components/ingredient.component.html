@@ -1,8 +1,30 @@
-﻿<div>
-    <label>Ingredient</label>
-    <input type="text" class="input-sm form-control" placeholder="name" [(ngModel)]="ingredient.name" />
-    <label>Amount</label>
-    <input class="input-sm form-control" type="number" [(ngModel)]="ingredient.amount" placeholder="amount" />
-    <label>Type</label>
-    <input class="input-sm form-control" type="text" [(ngModel)]="ingredient.type" list="ingredient-types" />
-</div>
+﻿<fieldset>
+    <legend>New Ingredient</legend>
+    <div class="col-xs-7">
+        <label for="ingredientName">Ingredient</label>
+        <div class="input-group input-group-sm">
+            <input type="text" class="form-control" id="ingredientName" placeholder="name" [(ngModel)]="ingredient.name" />
+            <span class="input-group-addon pointer">
+                <span class="glyphicon glyphicon-option-horizontal"></span>
+            </span>
+        </div>
+    </div>
+
+    <div class="col-xs-12"></div>
+
+    <div class="col-md-3">
+        <label for="ingredientAmount">Amount</label>
+        <div class="input-group input-group-sm">
+            <input class="form-control" type="number" id="ingredientAmount" [(ngModel)]="ingredient.amount" placeholder="amount" />
+        </div>
+    </div>
+
+    <div class="col-xs-12"></div>
+
+    <div class="col-md-4">
+        <label for="ingredientType">Type</label>
+        <div class="input-group input-group-sm">
+            <input class="form-control" type="text" id="ingredientType" [(ngModel)]="ingredient.type" list="ingredient-types" />
+        </div>
+    </div>
+</fieldset>

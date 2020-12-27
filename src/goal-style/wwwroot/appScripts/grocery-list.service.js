@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/toPromise");
 var GroceryListService = (function () {
@@ -29,10 +30,11 @@ var GroceryListService = (function () {
     GroceryListService.prototype.getGroceryList = function (id) {
         return this.getGroceriesList().then(function (groceriesList) { return groceriesList.find(function (groceryList) { return groceryList.id === id; }); });
     };
-    GroceryListService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], GroceryListService);
     return GroceryListService;
 }());
+GroceryListService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], GroceryListService);
 exports.GroceryListService = GroceryListService;
+//# sourceMappingURL=grocery-list.service.js.map

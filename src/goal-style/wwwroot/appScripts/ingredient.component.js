@@ -8,23 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ingredient_1 = require("./ingredient");
 var IngredientComponent = (function () {
     function IngredientComponent() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', ingredient_1.Ingredient)
-    ], IngredientComponent.prototype, "ingredient", void 0);
-    IngredientComponent = __decorate([
-        core_1.Component({
-            selector: "ingredient",
-            templateUrl: "html-components/grocery-components/create-meal-components/ingredient.component.html",
-            styleUrls: ["appCss/ingredient.component.css"]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], IngredientComponent);
     return IngredientComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", ingredient_1.Ingredient)
+], IngredientComponent.prototype, "ingredient", void 0);
+IngredientComponent = __decorate([
+    core_1.Component({
+        selector: "ingredient",
+        templateUrl: "html-components/grocery-components/create-meal-components/ingredient.component.html",
+        styleUrls: ["appCss/ingredient.component.css"]
+    })
+], IngredientComponent);
 exports.IngredientComponent = IngredientComponent;
+//# sourceMappingURL=ingredient.component.js.map

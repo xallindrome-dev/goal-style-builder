@@ -7,13 +7,18 @@ html, body {
 }
 
 body {
-    padding: 10px;
     margin: 0 auto;
     font-family: $bodyFont;
+    background: lightblue;
+}
+
+main {
+    padding-top: 60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $headerFont;
+    margin-top: 0;
 }
 
 .pointer {

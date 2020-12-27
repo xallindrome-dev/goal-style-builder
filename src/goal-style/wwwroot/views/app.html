@@ -1,5 +1,5 @@
-﻿<main [style.marginRight]="mainMarginRight">
-    <nav class="navbar navbar-default navbar-fixed-top">
+﻿<main [style.marginLeft]="mainMarginLeft" class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top" [style.left]="mainMarginLeft" [style.paddingRight]="navPaddingRight">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#master-navbar" aria-expanded="false">
@@ -25,10 +25,7 @@
             </div>
         </div>
     </nav>
-    <br />
-    <br />
     <router-outlet></router-outlet>
-    <span (click)="openSideNav()">Click me to open sidenav</span>
     <datalist id="ingredient-types">
         <option value="g">Gram(s)</option>
         <option value="tbsp">Tablespoon(s)</option>
@@ -40,5 +37,6 @@
 <sidenav
          [sideNavWidth]="sideNavWidth"
          [showOverlay]="showOverlay"
-         (closeNav)="closeSideNav($event)">
+         (toggleNav)="toggleSideNav($event)"
+         [sidenavMenuGlyph]="sidenavMenuGlyph">
 </sidenav>

@@ -36,7 +36,7 @@ import { SideNav } from "./sidenav.component";
         HttpModule
     ],
     declarations: [
-        AppComponent,
+        AppComponent, 
         GroceryMasterComponent,
         GroceryListComponent,
         CreateMealComponent,

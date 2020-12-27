@@ -1,12 +1,16 @@
 ﻿<nav class="sidenav" [style.width]="sideNavWidth">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeSideNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" (click)="toggleSideNav()">
+        <span [ngClass]="sidenavMenuGlyph" class="glyphicon"></span>
+        <span class="sr-only">Toggle Menu</span>
+    </a>
+
+    <details open>
+        <summary>Grocery List</summary>
+        <grocery-list></grocery-list>
+    </details>
     <details>
         <summary>Meal List</summary>
         <meal-list></meal-list>
-    </details>
-    <details>
-        <summary>Grocery List</summary>
-        <grocery-list></grocery-list>
     </details>
 </nav>
 

@@ -8,33 +8,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-require('./rxjs-extensions');
+require("./rxjs-extensions");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = "Goal Style";
         this.sideNavWidth = 0;
-        this.mainMarginRight = 0;
+        this.mainMarginLeft = 0;
+        this.navPaddingRight = 70;
         this.showOverlay = false;
+        this.sidenavMenuGlyph = 'glyphicon-menu-hamburger';
     }
-    AppComponent.prototype.openSideNav = function () {
-        this.sideNavWidth = 250;
-        this.mainMarginRight = 250;
-        this.showOverlay = true;
+    AppComponent.prototype.toggleSideNav = function (toggleNav) {
+        if (toggleNav) {
+            this.sideNavWidth = 250;
+            this.mainMarginLeft = -250;
+            this.navPaddingRight = 250;
+            this.showOverlay = true;
+            this.sidenavMenuGlyph = 'glyphicon-remove';
+        }
+        else {
+            this.sideNavWidth = 0;
+            this.mainMarginLeft = 0;
+            this.navPaddingRight = 70;
+            this.showOverlay = false;
+            this.sidenavMenuGlyph = 'glyphicon-menu-hamburger';
+        }
     };
-    AppComponent.prototype.closeSideNav = function (closeNav) {
-        this.sideNavWidth = 0;
-        this.mainMarginRight = 0;
-        this.showOverlay = false;
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: "my-app",
-            templateUrl: "views/app.html",
-            styleUrls: ["appCss/app.component.css"]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: "my-app",
+        templateUrl: "views/app.html",
+        styleUrls: ["appCss/app.component.css"]
+    }),
+    __metadata("design:paramtypes", [])
+], AppComponent);
 exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

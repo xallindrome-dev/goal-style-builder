@@ -10,20 +10,26 @@ import './rxjs-extensions';
 export class AppComponent {
     title = "Goal Style";
     sideNavWidth = 0;
-    mainMarginRight = 0;
+    mainMarginLeft = 0;
+    navPaddingRight = 70;
     showOverlay = false;
+    sidenavMenuGlyph = 'glyphicon-menu-hamburger';
 
     constructor() { }
 
-    openSideNav() {
-        this.sideNavWidth = 250;
-        this.mainMarginRight = 250;
-        this.showOverlay = true;
-    }
-
-    closeSideNav(closeNav: boolean) {
-        this.sideNavWidth = 0;
-        this.mainMarginRight = 0;
-        this.showOverlay = false;
+    toggleSideNav(toggleNav: boolean) {
+        if (toggleNav) {
+            this.sideNavWidth = 250;
+            this.mainMarginLeft = -250;
+            this.navPaddingRight = 250;
+            this.showOverlay = true;
+            this.sidenavMenuGlyph = 'glyphicon-remove';
+        } else {
+            this.sideNavWidth = 0;
+            this.mainMarginLeft = 0;
+            this.navPaddingRight = 70;
+            this.showOverlay = false;
+            this.sidenavMenuGlyph = 'glyphicon-menu-hamburger';
+        }
     }
 }

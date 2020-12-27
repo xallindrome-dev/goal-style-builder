@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = require("@angular/router");
 var grocery_master_component_1 = require("./grocery-master.component");
 var goal_master_component_1 = require("./goal-master.component");
@@ -23,3 +24,4 @@ var appRoutes = [
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);
+//# sourceMappingURL=app.routing.js.map

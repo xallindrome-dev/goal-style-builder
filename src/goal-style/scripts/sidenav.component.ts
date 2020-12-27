@@ -9,9 +9,13 @@
 export class SideNav {
     @Input() sideNavWidth: number;
     @Input() showOverlay: boolean;
-    @Output() closeNav = new EventEmitter<boolean>();
+    @Input() sidenavMenuGlyph: string;
+    @Output() toggleNav = new EventEmitter<boolean>();
 
-    closeSideNav() {
-        this.closeNav.emit(true);
+    localToggle = false;
+
+    toggleSideNav() {
+        this.localToggle = !this.localToggle;
+        this.toggleNav.emit(this.localToggle);
     }
 }

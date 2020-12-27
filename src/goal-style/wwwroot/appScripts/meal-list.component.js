@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var meal_service_1 = require("./meal.service");
 var MealListComponent = (function () {
@@ -24,13 +25,14 @@ var MealListComponent = (function () {
     MealListComponent.prototype.ngOnInit = function () {
         this.getMeals();
     };
-    MealListComponent = __decorate([
-        core_1.Component({
-            selector: "meal-list",
-            templateUrl: "html-components/grocery-components/meal-list.component.html"
-        }), 
-        __metadata('design:paramtypes', [meal_service_1.MealService])
-    ], MealListComponent);
     return MealListComponent;
 }());
+MealListComponent = __decorate([
+    core_1.Component({
+        selector: "meal-list",
+        templateUrl: "html-components/grocery-components/meal-list.component.html"
+    }),
+    __metadata("design:paramtypes", [meal_service_1.MealService])
+], MealListComponent);
 exports.MealListComponent = MealListComponent;
+//# sourceMappingURL=meal-list.component.js.map

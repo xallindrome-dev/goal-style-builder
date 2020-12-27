@@ -8,34 +8,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SideNav = (function () {
     function SideNav() {
-        this.closeNav = new core_1.EventEmitter();
+        this.toggleNav = new core_1.EventEmitter();
+        this.localToggle = false;
     }
-    SideNav.prototype.closeSideNav = function () {
-        this.closeNav.emit(true);
+    SideNav.prototype.toggleSideNav = function () {
+        this.localToggle = !this.localToggle;
+        this.toggleNav.emit(this.localToggle);
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], SideNav.prototype, "sideNavWidth", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Boolean)
-    ], SideNav.prototype, "showOverlay", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], SideNav.prototype, "closeNav", void 0);
-    SideNav = __decorate([
-        core_1.Component({
-            selector: "sidenav",
-            templateUrl: "html-components/sidenav.component.html",
-            styleUrls: ["appCss/sidenav.component.css"]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], SideNav);
     return SideNav;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], SideNav.prototype, "sideNavWidth", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], SideNav.prototype, "showOverlay", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], SideNav.prototype, "sidenavMenuGlyph", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], SideNav.prototype, "toggleNav", void 0);
+SideNav = __decorate([
+    core_1.Component({
+        selector: "sidenav",
+        templateUrl: "html-components/sidenav.component.html",
+        styleUrls: ["appCss/sidenav.component.css"]
+    })
+], SideNav);
 exports.SideNav = SideNav;
+//# sourceMappingURL=sidenav.component.js.map

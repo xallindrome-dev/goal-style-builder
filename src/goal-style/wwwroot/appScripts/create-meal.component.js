@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var meal_service_1 = require("./meal.service");
 var ingredient_service_1 = require("./ingredient.service");
@@ -49,6 +50,7 @@ var CreateMealComponent = (function () {
     };
     CreateMealComponent.prototype.addNewMeal = function () {
         this.isMealSaved = false;
+        this.addingIngredient = false;
         this.createNewMeal();
     };
     CreateMealComponent.prototype.ngOnInit = function () {
@@ -60,14 +62,16 @@ var CreateMealComponent = (function () {
         //}
         //});
     };
-    CreateMealComponent = __decorate([
-        core_1.Component({
-            selector: "create-meal",
-            templateUrl: "html-components/grocery-components/create-meal.component.html",
-            styleUrls: ["appCss/create-meal.component.css"]
-        }), 
-        __metadata('design:paramtypes', [meal_service_1.MealService, ingredient_service_1.IngredientService])
-    ], CreateMealComponent);
     return CreateMealComponent;
 }());
+CreateMealComponent = __decorate([
+    core_1.Component({
+        selector: "create-meal",
+        templateUrl: "html-components/grocery-components/create-meal.component.html",
+        styleUrls: ["appCss/create-meal.component.css"]
+    }),
+    __metadata("design:paramtypes", [meal_service_1.MealService,
+        ingredient_service_1.IngredientService])
+], CreateMealComponent);
 exports.CreateMealComponent = CreateMealComponent;
+//# sourceMappingURL=create-meal.component.js.map
